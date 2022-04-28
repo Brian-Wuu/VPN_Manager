@@ -1,7 +1,6 @@
 from cProfile import Profile
 from http import cookies
 from optparse import check_choice
-from tkinter import SEL_FIRST
 import requests
 import json
 import re
