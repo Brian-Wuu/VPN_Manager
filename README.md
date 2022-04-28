@@ -1,4 +1,4 @@
-# VPN_Converter
+# VPN_Manager
 > 机场订阅管理
 
 [v2ray_generator.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/v2ray_generator.py) 生成v2ray配置
