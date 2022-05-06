@@ -1,6 +1,29 @@
 # VPN_Manager
 > 机场订阅管理
 
+## Telegram Bot
+python-telegram-bot+webhook+nginx+openssl
+### Openssl
+`mkdir /etc/nginx/ssl`
+
+`cd /etc/nginx/ssl`
+
+`openssl req -newkey rsa:2048 -sha256 -nodes -keyout private.key -x509 -days 3650 -out cert.pem`
+
+**Caution:Make sure you enter the correct FQDN!**
+
+### Nginx
+`vim /etc/nginx/sites-available/default`
+
+    server {
+    listen 443 ssl;
+    ssl_certificate /etc/nginx/ssl/cert.pem;
+    ssl_certificate_key /etc/nginx/ssl/private.key;
+    location /TOKEN {proxy_pass http://127.0.0.1:5000/TOKEN/;}
+    }
+
+## 文件说明
+
 [vpn.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/vpn.py) 相关函数库供项目调用
 
 [v2ray_generator.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/v2ray_generator.py) 生成v2ray配置
@@ -16,3 +39,5 @@
 [v2ray_converter.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/v2ray_converter.py) 机场v2ray配置重命名
 
 [yaml_converter.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/yaml_converter.py) 机场yaml配置重命名
+
+[bot.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/telegram_bot/bot.py) Telegram Bot程序
