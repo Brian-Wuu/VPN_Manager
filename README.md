@@ -41,3 +41,5 @@ python-telegram-bot+webhook+nginx+openssl
 [yaml_converter.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/yaml_converter.py) 机场yaml配置重命名
 
 [bot.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/telegram_bot/bot.py) Telegram Bot程序
+
+[checkin.py](https://github.com/Gc-Mall/VPN_Manager/blob/main/checkin.py) 自动签到
