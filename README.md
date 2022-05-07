@@ -13,7 +13,8 @@ python-telegram-bot+webhook+nginx+openssl
 **Caution:Make sure you enter the correct FQDN!**
 
 ### Nginx
-`vim /etc/nginx/sites-available/default`
+
+`sudo vim /etc/nginx/sites-available/default`
 
     server {
     listen 443 ssl;
@@ -21,6 +22,8 @@ python-telegram-bot+webhook+nginx+openssl
     ssl_certificate_key /etc/nginx/ssl/private.key;
     location /TOKEN {proxy_pass http://127.0.0.1:5000/TOKEN/;}
     }
+
+`sudo systemctl restart nginx`
 
 ## 文件说明
 
