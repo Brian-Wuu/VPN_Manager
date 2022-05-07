@@ -1,7 +1,6 @@
 import pickle
 import os
 import time
-from pathlib import Path
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from google.auth.transport.requests import Request
