@@ -95,7 +95,7 @@ class Google_drive():
         start = time.time()
         file_id = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
         end = time.time()
-        print("上传文件成功！")
+        #print("上传文件成功！")
         #print('云端文件名称为: ' + str(file_metadata['name']))
         #print('云端文件ID为: ' + str(file_id['id']))
         #print('文件大小为: ' + str(file_metadata_size) + ' byte')
